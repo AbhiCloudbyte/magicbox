@@ -1,0 +1,23 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+#pygments: true
+highlighter: rogue
+markdown: kramdown
+
+title: Magic-Box
+description: The solution to all your problems.
+# disqus: AbhishekS19 # add disqus short name here
+author:
+  name: Abhishek Shrivastava
+  email: abhishek@cloudbyte.com
+  github: AbhiCloudbyte
+  linkedin: abhishek-shrivastava-03921390
+  bio: I am a techie at CloudByte India Technologies!
+
+categories_path: categories.html
+tags_path: tags.html
+
+BASE_PATH: http://abhicloudbyte.github.io/magicbox
