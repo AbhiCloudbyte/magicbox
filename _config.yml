@@ -12,10 +12,11 @@ description: The solution to all your problems.
 # disqus: AbhishekS19 # add disqus short name here
 author:
   name: Abhishek Shrivastava
-  email: abhishek@cloudbyte.com
+  email: abhicool2601@gmail.com
   github: AbhiCloudbyte
   linkedin: abhishek-shrivastava-03921390
   bio: I am a techie at CloudByte India Technologies!
+  email_md5: 2d787952d035fa6fe48ba154a21abc7c
 
 categories_path: categories.html
 tags_path: tags.html
