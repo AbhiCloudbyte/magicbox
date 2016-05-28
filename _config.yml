@@ -21,4 +21,4 @@ categories_path: categories.html
 tags_path: tags.html
 
 BASE_PATH: http://abhicloudbyte.github.io/magicbox
-GITHUB_PATH: https://github.com/AbhiCloudbyte/magicbox
+GITHUB_PATH: http://github.com/AbhiCloudbyte/magicbox
