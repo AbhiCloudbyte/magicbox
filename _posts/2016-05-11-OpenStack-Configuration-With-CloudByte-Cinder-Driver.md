@@ -158,18 +158,19 @@ date:       2016-05-11 11:30:00
   >> vi /opt/stack/tempest/etc/tempest.conf
   
   CHANGES TO BE ADDED:
-    [volume]
-    storage_protocol = iSCSI
-    vendor_name = CloudByte
-    ATTACH_ENCRYPTED_VOLUME_AVAILABLE = False
-    backend_names = <BACKEND_NAME1>, <BACKEND_NAME2> #For running temepst tests against multiple backend
     
-    [volume-feature-enabled]
-    multi_backend = True #For enabling temepst tests against multiple backend
+  [volume]
+  storage_protocol = iSCSI
+  vendor_name = CloudByte
+  ATTACH_ENCRYPTED_VOLUME_AVAILABLE = False
+  backend_names = <BACKEND_NAME1>, <BACKEND_NAME2> #For running temepst tests against multiple backend
+    
+  [volume-feature-enabled]
+  multi_backend = True #For enabling temepst tests against multiple backend
   ```
 
 - Run following command to run tempest test suite:
 
   ```
-  >> tox -eall -- volume --concurrency=1
+  tox -eall -- volume --concurrency=1
   ```
