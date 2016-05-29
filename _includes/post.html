@@ -17,7 +17,8 @@
      {{ page.date | date: "%Y" }}
    </span>
     <div class="article_body">
-    <div class="clearfix"></div>
+      {{ content }}
+      <div class="clearfix"></div>
     </div>
 
     {% unless page.categories == empty %}
