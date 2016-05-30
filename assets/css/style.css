@@ -83,10 +83,6 @@ article .share .gplus:hover {
 .page-header {
 	color: #e74c3c;
 	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
-	h6 {
-		font-family: 'Ubuntu', sans-serif;
-		color: #BDAD9F;
-	}
 }
 
 article{
@@ -117,7 +113,7 @@ article img { max-width: 100%; }
 h1 { font-family: 'Ubuntu', sans-serif; font-size: 34px; }
 h2 { font-family: 'Ubuntu', sans-serif; font-size: 30px; }
 h3,h4,h5 { font-family: 'Ubuntu', sans-serif; font-size: 26px; }
-h6 { font-family: 'Ubuntu', sans-serif; font-size: 16px; }
+h6 { font-family: 'Ubuntu', sans-serif; font-size: 16px; color: #5A5457; }
 
 article.home h1,
 article.home h2,
@@ -130,7 +126,7 @@ article.home h5 {
 
 article.home h6 {
 	font-family: 'Ubuntu', sans-serif;
-	color: #BDAD9F;
+	color: #5A5457;
 }
 
 article.home h1 a,
