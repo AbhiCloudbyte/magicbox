@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      OPENSTACK ISSUE 
 title:      Device too small
+subtitle:   "[OPENSTACK ISSUE]" 
 categories: [general, issues, openstack]
 tags:       [openstack, issues]
 date:       2016-05-13 12:35:00
