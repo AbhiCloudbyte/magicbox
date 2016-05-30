@@ -10,7 +10,7 @@ date:       2016-05-13 12:35:00
 
 ```
 
-2015-03-20 13:46:13.999 26841 ERROR oslo.messaging.rpc.dispatcher [req-e1f4df9a-f540-413f-bff6-a4abe3190cc3 5067c6594772458fb6af37beaf0850a7 0bbe5b28f466447d8fddb71333ee3936 - - -] Exception during message handling: Failed to copy image to volume: qemu-img: /dev/disk/by-path/ip-20.10.44.25:3260-iscsi-iqn.2015-01.acc1.RMSQL:acc19671fd10e988465084ef4126c94008d3-lun-0: error while converting raw: Device is too small
+2015-03-20 13:46:13.999 26841 ERROR oslo.messaging.rpc.dispatcher [req-e1f4df9a-f540-413f-bff6-a4abe3190cc3 5067c6594772458fb6af37beaf0850a7 0bbe5b28f466447d8fddb71333ee3936 - - -] Exception during message handling: Failed to copy image to volume: qemu-img: /dev/disk/by-path/ip-20.10.44.25:3260-iscsi-iqn.2015-01.acc1.RMSQL:acc19671fd10e988465084ef4126c94008d3-lun-0: error while converting raw: **Device is too small**
 
 2015-03-20 13:46:13.999 26841 TRACE oslo.messaging.rpc.dispatcher Traceback (most recent call last):
 
