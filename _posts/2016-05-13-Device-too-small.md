@@ -7,7 +7,8 @@ tags:       [openstack, issues]
 date:       2016-05-13 12:35:00
 ---
 
-### Observation :
+## Observation :
+
 
 ```
 
@@ -74,6 +75,6 @@ date:       2016-05-13 12:35:00
 2015-03-20 13:46:13.999 26841 TRACE oslo.messaging.rpc.dispatcher ImageCopyFailure: Failed to copy image to volume: qemu-img: /dev/disk/by-path/ip-20.10.44.25:3260-iscsi-iqn.2015-01.acc1.RMSQL:acc19671fd10e988465084ef4126c94008d3-lun-0: error while converting raw: Device is too small
 ```
 
-### Solution :
+## Solution :
 
 - Create the VM using a high capacity volume.
