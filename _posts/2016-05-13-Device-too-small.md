@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      OPENSTACK ISSUE 
-            Device too small
+title:      Device too small
 categories: [general, issues, openstack]
 tags:       [openstack, issues]
 date:       2016-05-13 12:35:00
