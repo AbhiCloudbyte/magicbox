@@ -9,9 +9,10 @@ date:       2016-05-14 14:30:00 (UTC +5:30)
 
 ## Observation:
 
+- Configuration file : /etc/cinder/cinder.conf
+
   ```
   
-  @/etc/cinder/cinder.conf
   [database]
   idle_timeout=3600
   max_pool_size=10
