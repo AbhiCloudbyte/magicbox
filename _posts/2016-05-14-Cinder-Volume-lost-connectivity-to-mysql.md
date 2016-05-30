@@ -9,9 +9,9 @@ date:       2016-05-14 14:30:00 (UTC +5:30)
 
 ## Observation:
 
-- Configuration file : /etc/cinder/cinder.conf
-
   ```
+  
+  >> vi /etc/cinder/cinder.conf
   
   [database]
   idle_timeout=3600
@@ -20,7 +20,7 @@ date:       2016-05-14 14:30:00 (UTC +5:30)
   max_overflow=30
   connection=mysql:///cinder:FCv56ZEZ@198.18.16.2/cinder?charset=utf8&read_timeout=60
 
-  ping to 198.18.16.2 worked fine.
+  >> ping to 198.18.16.2 worked fine.
   
   ```
 
