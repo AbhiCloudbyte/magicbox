@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      OpenStack Configuration with CloudByte Cinder Driver
+subtitle:   "[ OPENSTACK SETUP ]"
 categories: [general, setup, openstack]
 tags:       [openstack, setup]
 date:       2016-05-11 11:30:00
