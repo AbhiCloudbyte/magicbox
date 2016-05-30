@@ -6,7 +6,8 @@ tags:       [openstack, issues]
 date:       2016-05-13 12:26:00
 ---
 
-# Log Details:
+# Log Details
+
   
   ```
   cinder-volume Volume 7a59c80e-740a-4874-94d5-84b5851b66f5: being created as image with specification: 
