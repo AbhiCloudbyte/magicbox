@@ -14,6 +14,6 @@ Sometimes we find there is no Console for the VM's you create in Horizon. The qu
 
 ## Solution :
 
-* Put the following in your local.conf and do the unstack and stack again.
+- Put the following in your local.conf and do the unstack and stack again.
 
-![alt text](http://postimg.org/image/x6ac3tv57/)
+  <a href="http://s1381.photobucket.com/user/AbhishekS19/media/OPENSTACK_ISSUES_IMAGES/image9_zpstbkxt6dc.png.html" target="_blank"><img src="http://i1381.photobucket.com/albums/ah238/AbhishekS19/OPENSTACK_ISSUES_IMAGES/image9_zpstbkxt6dc.png" border="0" alt="NO_CONSOLE_IN_HORIZON photo image9_zpstbkxt6dc.png"/></a>
