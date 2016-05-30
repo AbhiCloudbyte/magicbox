@@ -1,7 +1,6 @@
 ---
 layout:     post
-title:      CloudByte Storage and OpenStack LVM Driver
-subtite:    Configuring CloudByte's iSCSI volume as LVM Driver volume-group
+title:      [OPENSTACK] CloudByte Storage and OpenStack LVM Driver
 categories: [general, setup, openstack]
 tags:       [openstack, setup]
 date:       2016-05-12 15:30:00
