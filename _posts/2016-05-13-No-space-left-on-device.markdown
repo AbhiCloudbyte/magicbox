@@ -8,6 +8,7 @@ date:       2016-05-13 12:26:00
 
 # Log Details
 
+  Below are the log details:
   
   ```
   
