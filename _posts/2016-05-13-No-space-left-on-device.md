@@ -7,9 +7,8 @@ date:       2016-05-13 12:26:00
 ---
 
 # Log Details:
-
+  
   ```
-
   cinder-volume Volume 7a59c80e-740a-4874-94d5-84b5851b66f5: being created as image with specification: 
     {'status': u'creating',
     'image_location': (u'file:///nfsmount/283c991d-89df-4a70-89c6-1b4474cc067f', None),
