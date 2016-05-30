@@ -129,6 +129,11 @@ article.home h6 {
 	color: #BD6C04;
 }
 
+article.body h6 {
+	font-family: 'Ubuntu', sans-serif;
+	color: #BDAD9F;
+}
+
 article.home h1 a,
 article.home h2 a,
 article.home h3 a,
