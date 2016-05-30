@@ -119,10 +119,14 @@ article.home h1,
 article.home h2,
 article.home h3,
 article.home h4,
-article.home h5,
-article.home h6 {
+article.home h5 {
 	font-family: 'Ubuntu', sans-serif;
 	color: #0B498C;
+}
+
+article.home h6 {
+	font-family: 'Ubuntu', sans-serif;
+	color: #BD6C04;
 }
 
 article.home h1 a,
