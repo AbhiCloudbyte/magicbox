@@ -4,7 +4,7 @@ title:      SSH to ElastiStor with Active Directory Credentials
 subtitle:   "[ AUTHENTICATION ]"
 categories: [general, setup, authentication]
 tags:       [authentication, setup]
-date:       2016-05-24 15:13:00
+date:       2016-05-24 15:13:00 (UTC +5:30)
 ---
 
 # SSH to ElastiStor with Active Directory Credentials
