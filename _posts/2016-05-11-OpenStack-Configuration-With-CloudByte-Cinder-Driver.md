@@ -5,12 +5,16 @@ subtitle:   "[ OPENSTACK SETUP ]"
 categories: [general, setup, openstack]
 tags:       [openstack, setup]
 date:       2016-05-11 11:30:00 (UTC +5:30)
+contributor_name:     Abhishek Shrivastava
+contributor_image:    "abhishek.jpg"
+contributor_linkedin: abhishek-shrivastava-03921390
+contributor_emailid:  abhishek@cloudbyte.com
 ---
 
 # OpenStack installation and configuring CloudByte storage as the cinder driver
 
 - To try/test OpenStack against CloudByte storage;
-  - one can start with the easy way i.e. using "devstack all in one" setup. 
+  - one can start with the easy way i.e. using "devstack all in one" setup.
 
 - Devstack requirements:
 
@@ -81,7 +85,7 @@ date:       2016-05-11 11:30:00 (UTC +5:30)
   [DEFAULT]
   default_volume_type = gold, silver
   enabled_backends = cb-gold, cb-silver
-  
+
   [cb-gold]
   volume_driver = cinder.volume.drivers.cloudbyte.cloudbyte.CloudByteISCSIDriver
   volume_backend_name = cb-gold
@@ -124,12 +128,15 @@ date:       2016-05-11 11:30:00 (UTC +5:30)
   - Start the services again.
   ```
 
-- NOTE : "enabled_backends" property contains the backend name pointing to VSMs (Virtual Storage Machines) of ElastiCenter. 
+- NOTE : **enabled_backends** property contains the backend name pointing to VSMs (Virtual Storage Machines) of ElastiCenter.
   - Its value can be more than one.
   - In other words it can point to one or more VSMs.
-- NOTE :  "default_volume_type" property contains the volume types
+- NOTE : **default_volume_type** property contains the volume types
   - Volume type are registered against a backend.
   - There can be more than one volume types, each corresponding to a backend.
+- NOTE : If using DevStack in order to update the cinder code with updated code use the following path
+  - PATH : **/opt/stack/cinder/cinder/volume/drivers/cloudbyte**
+  - Restart services c-api, c-sch and c-vol.
 
 - Create the volume type and assign them to backend
 
@@ -137,7 +144,7 @@ date:       2016-05-11 11:30:00 (UTC +5:30)
   NOTE : Run below command (per session)
   >> cd < devstack folder >
   >> source openrc admin admin
-  
+
   >> cinder type-create <VOLUME_TYPE_NAME>
   >> cinder type-key <VOLUME_TYPE_NAME> set volume_backend_name <ENABLED_BACKEND_NAME>
   ```
@@ -156,15 +163,15 @@ date:       2016-05-11 11:30:00 (UTC +5:30)
   ```
   FILE:
   >> vi /opt/stack/tempest/etc/tempest.conf
-  
+
   CHANGES TO BE ADDED:
-    
+
   [volume]
   storage_protocol = iSCSI
   vendor_name = CloudByte
   ATTACH_ENCRYPTED_VOLUME_AVAILABLE = False
   backend_names = <BACKEND_NAME1>, <BACKEND_NAME2> #For running temepst tests against multiple backend
-    
+
   [volume-feature-enabled]
   multi_backend = True #For enabling temepst tests against multiple backend
   ```

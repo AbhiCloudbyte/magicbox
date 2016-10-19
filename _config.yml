@@ -12,8 +12,8 @@ description: The solution to all your problems.
 # disqus: AbhishekS19 # add disqus short name here
 author:
   name: Abhishek Shrivastava
-  email: abhicool2601@gmail.com
-  github: AbhiCloudbyte
+  email: shri.abhishek01@gmail.com
+  github: AbhiS1892
   linkedin: abhishek-shrivastava-03921390
   bio: I am a techie at CloudByte India Technologies!
   email_md5: 2d787952d035fa6fe48ba154a21abc7c
@@ -21,4 +21,4 @@ author:
 categories_path: categories.html
 tags_path: tags.html
 
-BASE_PATH: http://abhicloudbyte.github.io/magicbox
+BASE_PATH: http://abhis1892.github.io/magicbox

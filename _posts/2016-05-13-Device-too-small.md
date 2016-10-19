@@ -1,10 +1,14 @@
 ---
 layout:     post
 title:      Device too small
-subtitle:   "[ OPENSTACK ISSUE ]" 
+subtitle:   "[ OPENSTACK ISSUE ]"
 categories: [general, issues, openstack]
 tags:       [openstack, issues]
 date:       2016-05-13 12:35:00 (UTC +5:30)
+contributor_name:     #
+contributor_image:    #
+contributor_linkedin: #
+contributor_emailid:  #
 ---
 
 ## Observation :

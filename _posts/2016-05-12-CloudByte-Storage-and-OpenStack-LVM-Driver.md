@@ -5,6 +5,10 @@ subtitle:   "[ OPENSTACK SETUP ]"
 categories: [general, setup, openstack]
 tags:       [openstack, setup]
 date:       2016-05-12 15:30:00 (UTC +5:30)
+contributor_name:     Abhishek Shrivastava
+contributor_image:    "abhishek.jpg"
+contributor_linkedin: abhishek-shrivastava-03921390
+contributor_emailid:  abhishek@cloudbyte.com
 ---
 
 # OpenStack LVM using CloudByte's iSCSI Volume
@@ -27,7 +31,7 @@ Following steps were done on
 
 ### Install iSCSI Initiator
 
-- Configure Ubuntu Server as an iSCSI initiator install the open-iscsi package. 
+- Configure Ubuntu Server as an iSCSI initiator install the open-iscsi package.
 
 
   ```
@@ -49,12 +53,12 @@ Following steps were done on
 
   ```
   sudo iscsiadm -m discovery -t st -p 192.168.0.10
-  
+
   options
   -m: determines the mode that iscsiadm executes in.
   -t: specifies the type of discovery.
   -p: option indicates the target IP address.
-  
+
   NOTE : Change example 192.168.0.10 to the target IP address on your network.
   ```
 
@@ -63,7 +67,7 @@ Following steps were done on
 
   ```
   192.168.0.10:3260,1 iqn.1992-05.com.emc:sl7b92030000520000-2
-  
+
   NOTE : The iqn number and IP address above will vary depending on your hardware.
   ```
 
@@ -100,13 +104,13 @@ Following steps were done on
   [ 2486.964862] sd 4:0:0:3: [sdb] Attached SCSI disk
   ```
 
-- In the output above **sdb** is the new iSCSI disk. 
+- In the output above **sdb** is the new iSCSI disk.
   - this is just an example; the output you see on your screen will vary.
 
-- Next Steps: 
-  - create a partition, 
+- Next Steps:
+  - create a partition,
   - format the file system, and
-  - login to the new iSCSI disk. 
+  - login to the new iSCSI disk.
 
   ```
   sudo fdisk /dev/sdb
@@ -115,9 +119,9 @@ Following steps were done on
   enter
   enter
   w
-  
+
   NOTE : The above commands are from inside the fdisk utility; see man fdisk
-         for more detailed instructions. 
+         for more detailed instructions.
   NOTE : cfdisk utility is sometimes more user friendly.
   ```
 
@@ -133,7 +137,7 @@ Following steps were done on
 
   ```
   sudo vgs
-  
+
   You may get the following output:
   VG                        #PV #LV #SN Attr   VSize  VFree
   stack-volumes-default       1   0   0 wz--n- 10.01g 10.01g
@@ -143,12 +147,12 @@ Following steps were done on
 - Create a new lvm volume group on above created partition
 
   ```
-  sudo pvcreate /dev/sdb1 
+  sudo pvcreate /dev/sdb1
   sudo vgcreate cinder-cb-volumes /dev/sdb1
-  
-  NOTE : Assuming /dev/sdb is the partition you want to use 
+
+  NOTE : Assuming /dev/sdb is the partition you want to use
   NOTE : here /dev/sdb1 is a valid unused device
-  
+
   NOTE : If executing 'pvcreate' results into below error
          Device /dev/sdb1 not found (or ignored by filtering).
   Try below :
@@ -156,12 +160,12 @@ Following steps were done on
         Comment the following line
         global_filter = [ "a|loop0|", "a|loop1|", "r|.*|" ]  # from devstack
   ```
-  
+
 - Verify existence of new lvm volume group that was just added.
 
   ```
   sudo vgs
-  
+
   VG                        #PV #LV #SN Attr   VSize  VFree
   cinder-cb-volumes           1   1   0 wz--n- 10.00g  9.00g
   stack-volumes-default       1   0   0 wz--n- 10.01g 10.01g
@@ -170,17 +174,17 @@ Following steps were done on
 
 - Register a new LVM backend in **cinder.conf** and
 - Add the newly created volume-group to this new LVM backend
-  - e.g. below edit 
+  - e.g. below edit
     - registers a new backend called 'cloudbyte-lvm'
     - adds 'cinder-cb-volumes' as the volume group
 
   ```
   sudo vi /etc/cinder/cinder.conf
-  
+
   [DEFAULT]
   default_volume_type = lvmdriver-1,cb-lvm
   enabled_backends = lvmdriver-1, cloudbyte-lvm
-  
+
   [cloudbyte-lvm]
   lvm_type = default
   iscsi_helper = tgtadm
@@ -202,7 +206,7 @@ Following steps were done on
   service cinder-api restart
   service cinder-scheduler restart
   service cinder-volume restart
-  
+
   service cinder-api status
   service cinder-scheduler status
   service cinder-volume status
